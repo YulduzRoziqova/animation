@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background: plum;
+}
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P';
+    color:  purple;
+    font-size: 36px;
+}
+
+.loading span{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: purple;
+    margin: 0 7px;
+    border-radius: 10px;
+    animation: 1.2s upDown infinite;
+}
+
+.loading span:first-child{
+    animation-delay: .15s;
+}
+.loading span:nth-child(2) {
+    animation-delay: .45s;
+}
+.loading span:last-child {
+    animation-delay: .75s;
+}
+@keyframes upDown {
+    0%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }   
+    100%{
+        transform: translateY(0);
+    }
+
+}
